@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: calc(100vw - var(--sidebarWidth));
+  left: var(--sidebarWidth);
+  transition: 0.3s;
+}
+.main.menuHidden {
+  left: 64px;
+  width: calc(100vw - 64px);
+}
