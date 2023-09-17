@@ -19,27 +19,63 @@ const Sidebar = ({ menuHidden, setMenuHidden }: Props) => {
       </div>
       <ul>
         <li>
-          <Link to={AllowedPaths.HOMEPAGE} activeClassName={styles.active}>
-            <Icons.Home fill="hsl(54, 100%, 63%)" />
+          <Link
+            to={AllowedPaths.HOMEPAGE}
+            activeClassName={styles.active}
+            inactiveChildren={
+              <>
+                <Icons.Home fill="hsl(54, 100%, 63%)" />
+                {!menuHidden && "Home"}
+              </>
+            }
+          >
+            <Icons.Home fill="hsl(121, 76%, 62%)" />
             {!menuHidden && "Home"}
           </Link>
         </li>
         <li>
-          <Link to={AllowedPaths.PAGE1} activeClassName={styles.active}>
-            <Icons.Server fill="hsl(54, 100%, 63%)" />
-            {!menuHidden && "Page1"}
+          <Link
+            to={AllowedPaths.PAGE1}
+            activeClassName={styles.active}
+            inactiveChildren={
+              <>
+                <Icons.Server fill="hsl(54, 100%, 63%)" />
+                {!menuHidden && "Server"}
+              </>
+            }
+          >
+            <Icons.Server fill="hsl(121, 76%, 62%)" />
+            {!menuHidden && "Server"}
           </Link>
         </li>
         <li>
-          <Link to={AllowedPaths.PAGE2} activeClassName={styles.active}>
-            <Icons.Machine stroke="hsl(54, 100%, 63%)" />
-            {!menuHidden && "Page2"}
+          <Link
+            to={AllowedPaths.PAGE2}
+            activeClassName={styles.active}
+            inactiveChildren={
+              <>
+                <Icons.Chat stroke="hsl(54, 100%, 63%)" />
+                {!menuHidden && "Chat"}
+              </>
+            }
+          >
+            <Icons.Chat stroke="hsl(121, 76%, 62%)" />
+            {!menuHidden && "Chat"}
           </Link>
         </li>
         <li>
-          <Link to={AllowedPaths.PAGE3} activeClassName={styles.active}>
-            <Icons.Chat stroke="hsl(54, 100%, 63%)" />
-            {!menuHidden && "Page3"}
+          <Link
+            to={AllowedPaths.PAGE3}
+            activeClassName={styles.active}
+            inactiveChildren={
+              <>
+                <Icons.Support fill="hsl(54, 100%, 63%)" />
+                {!menuHidden && "Support"}
+              </>
+            }
+          >
+            <Icons.Support fill="hsl(121, 76%, 62%)" />
+            {!menuHidden && "Support"}
           </Link>
         </li>
       </ul>

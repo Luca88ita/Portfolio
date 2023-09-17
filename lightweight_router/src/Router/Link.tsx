@@ -1,5 +1,6 @@
 import {
   ComponentPropsWithoutRef,
+  ReactNode,
   useContext,
   useEffect,
   useState,
@@ -9,11 +10,19 @@ import { RouterContext } from "../Contexts/RouterContext";
 interface LinkProps extends ComponentPropsWithoutRef<"div"> {
   to: string;
   activeClassName?: string | undefined;
+  inactiveChildren?: ReactNode | ReactNode[];
 }
 
-const Link = ({ to, className, activeClassName, ...rest }: LinkProps) => {
+const Link = ({
+  to,
+  className,
+  activeClassName,
+  inactiveChildren,
+  ...rest
+}: LinkProps) => {
   const { currentPath } = useContext(RouterContext);
   const [isActive, setIsActive] = useState<boolean>(currentPath === to);
+
   useEffect(() => {
     setIsActive(currentPath === to);
   }, [currentPath, to]);
@@ -41,7 +50,9 @@ const Link = ({ to, className, activeClassName, ...rest }: LinkProps) => {
       }`}
       {...rest}
     >
-      <a href={to}>{rest.children}</a>
+      <a href={to}>
+        {inactiveChildren && !isActive ? inactiveChildren : rest.children}
+      </a>
     </div>
   );
 };
