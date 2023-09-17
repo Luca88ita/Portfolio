@@ -9,10 +9,10 @@ import Page2 from "./Views/Pages/Page2";
 import Page3 from "./Views/Pages/Page3";
 import { AllowedPaths } from "./utils/types";
 
-function App() {
+const App = () => {
   const [menuHidden, setMenuHidden] = useState<boolean>(false);
   return (
-    <div className={styles.app}>
+    <div className={`${styles.app} ${menuHidden ? styles.hidden : ""}`}>
       <Sidebar menuHidden={menuHidden} setMenuHidden={setMenuHidden} />
 
       <Main menuHidden={menuHidden}>
@@ -31,6 +31,6 @@ function App() {
       </Main>
     </div>
   );
-}
+};
 
 export default App;

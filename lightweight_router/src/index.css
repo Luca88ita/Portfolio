@@ -1,5 +1,6 @@
 :root {
-  --sidebarWidth: 300px;
+  --menuWidth: 300px;
+  --menuMinHeigth: 64px;
 }
 
 body {
