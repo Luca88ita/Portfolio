@@ -80,7 +80,6 @@
   background-color: hsl(0 0% 100% / 5%);
   color: hsl(121, 76%, 62%);
   border-radius: 10px;
-  transition: 0.3s;
 }
 .logo > div {
   margin-top: 16px;

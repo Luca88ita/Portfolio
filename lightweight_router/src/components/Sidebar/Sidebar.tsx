@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import styles from "./Sidebar.module.css";
 import Link from "../../Router/Link";
 import { Icons } from "../../utils/Icons";

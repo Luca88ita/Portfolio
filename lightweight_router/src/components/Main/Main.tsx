@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import styles from "./Main.module.css";
 
 interface Props extends PropsWithChildren {
