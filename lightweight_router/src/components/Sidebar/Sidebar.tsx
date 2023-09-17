@@ -21,6 +21,7 @@ const Sidebar = ({ menuHidden, setMenuHidden }: Props) => {
         <li>
           <Link
             to={AllowedPaths.HOMEPAGE}
+            className={styles.link}
             activeClassName={styles.active}
             inactiveChildren={
               <>
@@ -36,6 +37,7 @@ const Sidebar = ({ menuHidden, setMenuHidden }: Props) => {
         <li>
           <Link
             to={AllowedPaths.PAGE1}
+            className={styles.link}
             activeClassName={styles.active}
             inactiveChildren={
               <>
@@ -51,6 +53,7 @@ const Sidebar = ({ menuHidden, setMenuHidden }: Props) => {
         <li>
           <Link
             to={AllowedPaths.PAGE2}
+            className={styles.link}
             activeClassName={styles.active}
             inactiveChildren={
               <>
@@ -66,6 +69,7 @@ const Sidebar = ({ menuHidden, setMenuHidden }: Props) => {
         <li>
           <Link
             to={AllowedPaths.PAGE3}
+            className={styles.link}
             activeClassName={styles.active}
             inactiveChildren={
               <>

@@ -46,7 +46,6 @@
 
 .sideBar li a {
   line-height: 20px;
-  padding: 10px;
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -54,6 +53,9 @@
   align-items: center;
   font-size: 15px;
   font-weight: lighter;
+}
+.link {
+  padding: 10px;
 }
 
 .sideBar li:hover {
