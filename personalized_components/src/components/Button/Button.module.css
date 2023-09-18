@@ -1,0 +1,235 @@
+.button {
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  padding: 10px 20px;
+  flex: 1fr;
+}
+
+.login {
+  background: blue;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 30px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 0 6px #3434df;
+}
+
+.login:hover {
+  background: #2222fd;
+}
+
+.login:active {
+  background: blue;
+  box-shadow: 0 0 2px #6262fa;
+}
+
+.default {
+  background: blue;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 30px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 0 6px #3434df;
+}
+
+.default:hover {
+  background: #2222fd;
+}
+
+.default:active {
+  background: blue;
+  box-shadow: 0 0 2px #6262fa;
+}
+
+.cornerGreen,
+.connect {
+  background: #008000;
+  background: hsl(0 0% 100% / 10%);
+  color: hsl(120, 80%, 70%);
+  color: white;
+
+  background: linear-gradient(
+    180deg,
+    hsl(120, 48%, 24%),
+    hsla(120, 37%, 30%, 0.5)
+  );
+  border: 1px solid hsl(120 0% 100% / 10%);
+
+  border-radius: 30px;
+  /* width: 100px; */
+  /* height: 30px; */
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 2px 10px #00000020;
+}
+
+.cornerGreen:hover,
+.connect:hover {
+  /* color: white; */
+  text-shadow: 0 1px 2px hsl(0 0% 100% / 10%);
+  background: hsl(0 0% 100% / 20%);
+  /* color: hsl(120, 90%, 60%); */
+
+  background: linear-gradient(
+    180deg,
+    hsl(120, 59%, 45%),
+    hsla(120, 51%, 47%, 0.5)
+  );
+  border: 1px solid hsl(120 50% 20% / 100%);
+
+  /* box-shadow: 0 0 6px hsl(120 100% 77% / 20%); */
+}
+
+.cornerGreen:active,
+.connect:active {
+  background: #008000;
+  box-shadow: 0 0 2px #80cc80;
+}
+
+.disconnect {
+  background: #ff0000;
+  background: hsl(0 0% 100% / 10%);
+  color: hsl(0, 80%, 70%);
+
+  color: white;
+
+  background: linear-gradient(180deg, hsl(0, 48%, 24%), hsla(0, 37%, 30%, 0.5));
+  border: 1px solid hsl(0 0% 100% / 10%);
+
+  border-radius: 30px;
+  /* width: 100px; */
+  /* height: 30px; */
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 0 6px #ff0000;
+  box-shadow: 0 2px 10px #00000020;
+}
+
+.disconnect:hover {
+  background: #ff6262;
+  box-shadow: 0 0 6px #ff6262;
+
+  background: hsl(0 0% 100% / 20%);
+
+  background: linear-gradient(180deg, hsl(0, 59%, 45%), hsla(0, 51%, 47%, 0.5));
+  border: 1px solid hsl(0 50% 20% / 100%);
+}
+
+.disconnect:active {
+  background: #ff0000;
+  box-shadow: 0 0 4px #ff6262;
+}
+
+.bigPurple {
+  border-radius: 40px;
+  width: auto;
+  min-width: 200px;
+  /* height: 30px; */
+  padding: 20px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  /* box-shadow: 0 0 6px #3434df; */
+  background: linear-gradient(
+    180deg,
+    hsl(300, 48%, 24%),
+    hsla(320, 37%, 30%, 0.5)
+  );
+  border: 1px solid hsl(0 0% 100% / 10%);
+}
+
+.bigPurple:hover {
+  background: #2222fd;
+  /* box-shadow: 0 2px 10px inset hsl(0 0% 0% / 20%); */
+  background: linear-gradient(
+    180deg,
+    hsl(300, 59%, 45%),
+    hsla(320, 51%, 47%, 0.5)
+  );
+  border: 1px solid hsl(300 50% 20% / 100%);
+}
+
+.bigPurple:active {
+  background: blue;
+  box-shadow: 0 0 2px #6262fa;
+}
+
+.cornerGreen {
+  z-index: 99999;
+  position: absolute;
+  right: 80px;
+  bottom: 80px;
+  opacity: 0.9;
+}
+.cornerGreen:hover {
+  opacity: 1;
+}
+
+/* Below the disabled buttons behaviour*/
+.cornerGreen.disabled,
+.bigPurple.disabled,
+.disconnect.disabled,
+.connect.disabled,
+.default.disabled {
+  background: hsl(0 0% 100% / 5%);
+  color: hsl(0 0% 100% / 20%);
+  box-shadow: none;
+  text-shadow: none;
+  cursor: default;
+  border: none;
+}
+
+.cornerGreen.disabled:hover,
+.bigPurple.disabled:hover,
+.disconnect.disabled:hover,
+.connect.disabled:hover,
+.default.disabled:hover {
+  background: hsl(0 0% 100% / 5%);
+  color: hsl(0 0% 100% / 20%);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.cornerGreen.disabled:active,
+.bigPurple.disabled:active,
+.disconnect.disabled:active,
+.connect.disabled:active,
+.default.disabled:active {
+  background: hsl(0 0% 100% / 5%);
+  color: hsl(0 0% 100% / 20%);
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.disabled2 {
+  cursor: default;
+  color: gray;
+  background-color: rgb(45, 38, 38);
+  border: lightcyan;
+  box-shadow: none;
+  text-shadow: none;
+}
+.disabled2:hover {
+  background-color: rgb(45, 38, 38);
+  border: lightcyan;
+}
+
+.disabled2:active {
+  background-color: rgb(45, 38, 38);
+  border: lightcyan;
+}
